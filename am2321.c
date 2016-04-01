@@ -92,8 +92,8 @@ am2321(float *out_temperature, float *out_humidity)
   if (crcdata != crcread) 
     return 10;
 
-  uint16_t temp16 = _combine_bytes(data[2], data[3]); 
-  uint16_t humi16 = _combine_bytes(data[4], data[5]);   
+  uint16_t temp16 = _combine_bytes(data[4], data[5]); 
+  uint16_t humi16 = _combine_bytes(data[2], data[3]);   
   //printf("temp=%u 0x%04x  hum=%u 0x%04x\n", temp16, temp16, humi16, humi16);
   
   /* Temperature resolution is 16Bit, 
