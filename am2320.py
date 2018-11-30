@@ -1,3 +1,4 @@
+
 #!/usr/bin/python
 
 # ph01 - phil hall
@@ -6,6 +7,7 @@
 # 2) creating new variable self._fd
 # 3) deleting variable self._i2cbus
 # 4) adding method __del__ to handle posix.close
+# 5) adding a degrees sign and pretty up the print statement
 
 import posix
 from fcntl import ioctl
@@ -92,5 +94,5 @@ class AM2320:
 
 am2320 = AM2320(1)
 (t,h) = am2320.readSensor()
-print t, h
+print '%02.2f%sC %02.2f%%' % (t, u'\N{DEGREE SIGN}', h)
 
