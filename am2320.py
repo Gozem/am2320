@@ -84,5 +84,5 @@ class AM2320:
 
 am2320 = AM2320(1)
 (t,h) = am2320.readSensor()
-print t, h
+print(t, h)
 
